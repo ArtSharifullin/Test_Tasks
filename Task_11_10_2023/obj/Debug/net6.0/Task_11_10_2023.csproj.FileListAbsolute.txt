@@ -1,0 +1,14 @@
+C:\Users\Moibaty\source\repos\Test_Tasks\Task_11_10_2023\bin\Debug\net6.0\Task_11_10_2023.exe
+C:\Users\Moibaty\source\repos\Test_Tasks\Task_11_10_2023\bin\Debug\net6.0\Task_11_10_2023.deps.json
+C:\Users\Moibaty\source\repos\Test_Tasks\Task_11_10_2023\bin\Debug\net6.0\Task_11_10_2023.runtimeconfig.json
+C:\Users\Moibaty\source\repos\Test_Tasks\Task_11_10_2023\bin\Debug\net6.0\Task_11_10_2023.dll
+C:\Users\Moibaty\source\repos\Test_Tasks\Task_11_10_2023\bin\Debug\net6.0\Task_11_10_2023.pdb
+C:\Users\Moibaty\source\repos\Test_Tasks\Task_11_10_2023\obj\Debug\net6.0\Task_11_10_2023.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Moibaty\source\repos\Test_Tasks\Task_11_10_2023\obj\Debug\net6.0\Task_11_10_2023.AssemblyInfoInputs.cache
+C:\Users\Moibaty\source\repos\Test_Tasks\Task_11_10_2023\obj\Debug\net6.0\Task_11_10_2023.AssemblyInfo.cs
+C:\Users\Moibaty\source\repos\Test_Tasks\Task_11_10_2023\obj\Debug\net6.0\Task_11_10_2023.csproj.CoreCompileInputs.cache
+C:\Users\Moibaty\source\repos\Test_Tasks\Task_11_10_2023\obj\Debug\net6.0\Task_11_10_2023.dll
+C:\Users\Moibaty\source\repos\Test_Tasks\Task_11_10_2023\obj\Debug\net6.0\refint\Task_11_10_2023.dll
+C:\Users\Moibaty\source\repos\Test_Tasks\Task_11_10_2023\obj\Debug\net6.0\Task_11_10_2023.pdb
+C:\Users\Moibaty\source\repos\Test_Tasks\Task_11_10_2023\obj\Debug\net6.0\Task_11_10_2023.genruntimeconfig.cache
+C:\Users\Moibaty\source\repos\Test_Tasks\Task_11_10_2023\obj\Debug\net6.0\ref\Task_11_10_2023.dll
