@@ -1,57 +1,58 @@
 ﻿// ps2 part1 task10
-/*static long Fact(long n)
+
+Console.WriteLine("-------------------------------------------------\n Ps2 p1 task10\n");
+Console.WriteLine(SqrtOnePlusX(0.01));
+static string SqrtOnePlusX(double eps)
 {
-    if (n == 0) return 1;
-    else return n * Fact(n - 1);
+    int count = 1, k = 1;
+    Console.Write("Введите число x (|x|<=1) для формулы Sqrt(1 + x): ");
+    double x = double.Parse(Console.ReadLine());
+    double kfact = 1, k2fact = 2;
+    double y = Math.Sqrt(1 + x), y0 = 1;
+    while (Math.Abs(y - y0) > eps)
+    {
+        y0 += ((Math.Pow(-1, k) * k2fact) / ((1 - (2*k)) * Math.Pow(kfact,2) * Math.Pow(4,k))) * Math.Pow(x,k);
+        k++;
+        kfact *= k;
+        k2fact *= (k+1) * (k+2);
+        count++;
+    }
+    Console.WriteLine($"y: {y} y0: {y0}");
+    return $"count = {count}";
 }
-
-int k = 1, count = 1;
-double e = 0.01;
-double x = double.Parse(Console.ReadLine());
-
-double y = Math.Sqrt(1 + x), y0 = 1;
-while (Math.Abs(y - y0) > e)
-{
-    double numerator = Math.Pow(-1, k) * Fact(2 * k);
-    double denominator = (1 - 2 * k) * Math.Pow(Fact(k), 2) * Math.Pow(4, k);
-    y0 += (numerator / denominator) * Math.Pow(x, k);
-    k++;
-    count++;
-}
-
-Console.WriteLine($"y: {y} y0: {y0} count = {count-1}");
-
-*/
+    
 
 
 //ps2 part2 task4
-/*
-int k = 1;
-double p = Math.PI, p0 = 0, e = 0.1;
+Console.WriteLine("-------------------------------------------------\n Ps2 p2 task4\n");
 
-static double Sum(double s, int k)
+Console.WriteLine($"Наше число П: {Pi(0.001)}");
+Console.WriteLine($"Число П: {Math.PI}");
+static double Pi(double eps)
 {
-    s += 1 / ((4 * k - 2) * (4 * k - 1));
-    return s;
+    double pi = Math.PI;
+    double res = 0;
+    double k = 1;
+    double log = Math.Log(2);
+    while (Math.Abs(pi - (8 * res + 2 * log)) > eps)
+    {
+        res += 1 / (4 * k - 2) / (4 * k - 1);
+        k++;
+    }
+    return 8 * res + 2 * log;
 }
 
-while (Math.Abs(p-p0) > e)
-{
-    p0 = (8 * Sum(p0, k)) + (2 * Math.Log(2));
-    k++;
-}
-Console.WriteLine($"p: {p} p0: {p0}");
-*/
+
 
 
 //ps2 part4 task 3
-
+Console.WriteLine("-------------------------------------------------\n Ps2 p4 task3\n");
 static double func(double x)
 {
     return -(Math.Tan(1/x + x));
 }
 // формула левых прямоугольников
-static double lRect(double a, double b, int n)
+static double lRect(double a, double b, double n)
 {
     double sum = 0.0;
     double h = (b - a) / n;
@@ -62,7 +63,7 @@ static double lRect(double a, double b, int n)
     return sum;
 }
 // формула правых прямоугольников
-static double rRect(double a, double b, int n)
+static double rRect(double a, double b, double n)
 {
     double sum = 0.0;
     double h = (b - a) / n;
@@ -85,7 +86,7 @@ static double Trapeze(double a, double b, double n)
     return s * h;
 }
 // формула Симпсона
-static double Simpson(double a, double b, int n)
+static double Simpson(double a, double b, double n)
 {
     double h = (b - a) / n;
     double sum1 = 0, sum2 = 0;
@@ -105,27 +106,22 @@ static double Simpson(double a, double b, int n)
     return result;
 }
 // формула Монте-Карло
-static double MonteCarlo(double a, double b, int n)
+static double MonteCarlo(double a, double b, double n)
 {
-    double XLen = 1 / n;
-    double YLen = 1.6 / n;
-    double innerCount = 0, count = 0;
-    for (double x = a; x <= b; x += XLen)
+    Random r = new Random();
+    double sum = 0;
+    for (var i = 1; i <= n; i++)
     {
-        double f = func(x);
-        for (double y = 0; y <= 1.6; y += YLen)
-        {
-            if (y >= 0 && y <= f) innerCount++;
-            count++;
-        }
+        sum += func(r.Next((int)(a * 10), (int)(b * 10)) / 10.0);
     }
-    return innerCount / count * 1.6; 
+    return sum * (b - a) / n;
 }
 
 int n = 1000;
 double a = 0.5, b = 2.5, result = 2.56805;
 
-Console.WriteLine($"По формуле левых прямоугольников получилось = {lRect(a,b,n)}  |  " +
+
+Console.WriteLine($"По формуле левых прямоугольников получилось = {lRect(a, b, n)}  |  " +
     $"Разница: {lRect(a, b, n) - result}\n");
 
 Console.WriteLine($"По формуле правых прямоугольников получилось = {rRect(a, b, n)}  |  " +
@@ -136,6 +132,9 @@ Console.WriteLine($"По формуле трапеций получилось = 
 
 Console.WriteLine($"По формуле Симпсона получилось = {Simpson(a, b, n)}  |  " +
     $"Разница: {Simpson(a, b, n) - result}\n");
+
+Console.WriteLine($"По формуле Монте-Карло получилось = {MonteCarlo(a, b, n)}  |  " +
+    $"Разница: {MonteCarlo(a, b, n) - result}\n");
 
 
 
