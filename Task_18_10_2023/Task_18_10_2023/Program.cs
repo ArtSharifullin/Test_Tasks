@@ -105,6 +105,22 @@ static double Simpson(double a, double b, int n)
     return result;
 }
 // формула Монте-Карло
+static double MonteCarlo(double a, double b, int n)
+{
+    double XLen = 1 / n;
+    double YLen = 1.6 / n;
+    double innerCount = 0, count = 0;
+    for (double x = a; x <= b; x += XLen)
+    {
+        double f = func(x);
+        for (double y = 0; y <= 1.6; y += YLen)
+        {
+            if (y >= 0 && y <= f) innerCount++;
+            count++;
+        }
+    }
+    return innerCount / count * 1.6; 
+}
 
 int n = 1000;
 double a = 0.5, b = 2.5, result = 2.56805;
