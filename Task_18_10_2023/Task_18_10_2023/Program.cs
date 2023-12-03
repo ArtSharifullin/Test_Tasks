@@ -1,6 +1,6 @@
 ﻿// ps2 part1 task10
 
-Console.WriteLine("-------------------------------------------------\n Ps2 p1 task10\n");
+/*Console.WriteLine("-------------------------------------------------\n Ps2 p1 task10\n");
 Console.WriteLine(SqrtOnePlusX(0.01));
 static string SqrtOnePlusX(double eps)
 {
@@ -20,7 +20,7 @@ static string SqrtOnePlusX(double eps)
     Console.WriteLine($"y: {y} y0: {y0}");
     return $"count = {count}";
 }
-    
+    */
 
 
 //ps2 part2 task4
