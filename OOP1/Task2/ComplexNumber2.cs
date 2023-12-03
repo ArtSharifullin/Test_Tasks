@@ -1,82 +1,78 @@
 ﻿using System;
 // 2
 
-namespace ComplexNumClass2
+namespace ComplexNumClass
 {
-    public class ComplexNum2
+    public class ComplexNum
     {
-        private readonly double realPart;
-        private readonly double imaginaryPart;
+        private double module;
+        private double argument;
 
-        public ComplexNum2(double r, double i)
+        public ComplexNum(double m = 0, double a = 0)
         {
-            realPart = r;
-            imaginaryPart = i;
+            module = m;
+            argument = a;
         }
 
-        public ComplexNum2(double i) : this(0, i)
+        public static ComplexNum Alg(double r, double i)
         {
+            var mod = Math.Sqrt(r * r + i * i);
+            var arg = 0.0;
+
+            if (r > 0) { arg = Math.Atan(i / r); }
+            if (r < 0 && i >= 0) { arg = Math.PI + Math.Atan(i / r); }
+            if (r < 0 && i < 0) { arg = Math.Atan(i / r) - Math.PI; }
+            if (r == 0 && i > 0) { arg = Math.PI / 2; }
+            if (r == 0 && i < 0) { arg = -(Math.PI / 2); }
+
+            return new ComplexNum(Math.Round(mod,5), Math.Round(arg,5));
         }
 
-        public double RealPart
+        public static ComplexNum Trig(double mod, double arg)
         {
-            get { return realPart; }
+            return new ComplexNum(mod, arg);
         }
 
-        public double ImaginaryPart
+        public double RealPart()
         {
-            get { return imaginaryPart; }
+            return Math.Round(module * Math.Cos(argument),3);
         }
 
-        public double Module()
+        public double ImaginaryPart()
         {
-            var z = Math.Sqrt(realPart * realPart + imaginaryPart * imaginaryPart);
-            return z;
+            return Math.Round(module * Math.Sin(argument),3);
         }
 
-        public double Argument()
+        public double Module
         {
-            double arg = 0;
-            if (realPart > 0) { arg = Math.Atan(imaginaryPart / realPart); }
-            if (realPart < 0 && imaginaryPart >= 0) { arg = Math.PI + Math.Atan(imaginaryPart / realPart); }
-            if (realPart < 0 && imaginaryPart < 0) { arg = Math.Atan(imaginaryPart / realPart) - Math.PI; }
-            if (realPart == 0 && imaginaryPart > 0) { arg = Math.PI / 2; }
-            if (realPart == 0 && imaginaryPart < 0) { arg = -(Math.PI / 2); }
-
-            return arg;
+            get { return module; }
         }
 
-        public void AlgShow()
+        public double Argument
         {
-            if (imaginaryPart > 0) { Console.WriteLine($"{realPart} + {imaginaryPart}i"); }
-            else { Console.WriteLine($"{realPart} - {Math.Abs(imaginaryPart)}i"); }
+            get { return argument; }
         }
 
-        public void TrigShow()
+        public static void Multiplication(ComplexNum a, ComplexNum b)
         {
-            Console.WriteLine($"{Module()} * (cos({Argument()}) + isin({Argument()}))");
-        }
-
-        public static void Multiplication(ComplexNum2 a, ComplexNum2 b)
-        {
-            var r = (a.realPart * b.realPart) - (a.imaginaryPart * b.imaginaryPart);
-            var i = (a.realPart * b.imaginaryPart) + (a.imaginaryPart * b.realPart);
-            if (i > 0) { Console.WriteLine($"{r} + {i}i"); }
-            else if (i < 0) { Console.WriteLine($"{r} - {Math.Abs(i)}i"); }
+            var r = (a.RealPart() * b.RealPart()) - (a.ImaginaryPart() * b.ImaginaryPart());
+            var i = (a.RealPart() * b.ImaginaryPart()) + (a.ImaginaryPart() * b.RealPart());
+            if (i > 0) { Console.WriteLine($"{Math.Round(r)} + {Math.Round(i)}i"); }
+            else if (i < 0) { Console.WriteLine($"{Math.Round(r)} - {Math.Abs(Math.Round(i))}i"); }
             else Console.WriteLine(r);
         }
 
-        public static void Division(ComplexNum2 a, ComplexNum2 b)
+        public static void Division(ComplexNum a, ComplexNum b)
         {
-            var denom = (b.realPart * b.realPart) + (b.imaginaryPart*b.imaginaryPart);
+            var denom = (b.RealPart() * b.RealPart()) + (b.ImaginaryPart() * b.ImaginaryPart());
 
             if (denom != 0)
             {
-                var r = ((a.realPart * b.realPart) + (a.imaginaryPart * b.imaginaryPart))/denom;
-                var i = ((b.realPart * a.imaginaryPart) - (a.realPart * b.imaginaryPart))/denom;
+                var r = ((a.RealPart() * b.RealPart()) + (a.ImaginaryPart() * b.ImaginaryPart()))/denom;
+                var i = ((b.RealPart() * a.ImaginaryPart()) - (a.RealPart() * b.ImaginaryPart()))/denom;
 
-                if (i > 0) { Console.WriteLine($"{r} + {i}i"); }
-                else if (i < 0) { Console.WriteLine($"{r} - {Math.Abs(i)}i"); }
+                if (i > 0) { Console.WriteLine($"{Math.Round(r,5)} + {Math.Round(i,5)}i"); }
+                else if (i < 0) { Console.WriteLine($"{Math.Round(r, 5)} - {Math.Abs(Math.Round(i, 5))}i"); }
                 else Console.WriteLine(r);
             }
             else { Console.WriteLine("Знаменатель равен нулю, деление невозможно !"); }
