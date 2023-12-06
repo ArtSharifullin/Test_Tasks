@@ -1,0 +1,14 @@
+C:\Users\Moibaty\source\repos\Task_1\Controlnaya\bin\Debug\net6.0\Controlnaya.exe
+C:\Users\Moibaty\source\repos\Task_1\Controlnaya\bin\Debug\net6.0\Controlnaya.deps.json
+C:\Users\Moibaty\source\repos\Task_1\Controlnaya\bin\Debug\net6.0\Controlnaya.runtimeconfig.json
+C:\Users\Moibaty\source\repos\Task_1\Controlnaya\bin\Debug\net6.0\Controlnaya.dll
+C:\Users\Moibaty\source\repos\Task_1\Controlnaya\bin\Debug\net6.0\Controlnaya.pdb
+C:\Users\Moibaty\source\repos\Task_1\Controlnaya\obj\Debug\net6.0\Controlnaya.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Moibaty\source\repos\Task_1\Controlnaya\obj\Debug\net6.0\Controlnaya.AssemblyInfoInputs.cache
+C:\Users\Moibaty\source\repos\Task_1\Controlnaya\obj\Debug\net6.0\Controlnaya.AssemblyInfo.cs
+C:\Users\Moibaty\source\repos\Task_1\Controlnaya\obj\Debug\net6.0\Controlnaya.csproj.CoreCompileInputs.cache
+C:\Users\Moibaty\source\repos\Task_1\Controlnaya\obj\Debug\net6.0\Controlnaya.dll
+C:\Users\Moibaty\source\repos\Task_1\Controlnaya\obj\Debug\net6.0\refint\Controlnaya.dll
+C:\Users\Moibaty\source\repos\Task_1\Controlnaya\obj\Debug\net6.0\Controlnaya.pdb
+C:\Users\Moibaty\source\repos\Task_1\Controlnaya\obj\Debug\net6.0\Controlnaya.genruntimeconfig.cache
+C:\Users\Moibaty\source\repos\Task_1\Controlnaya\obj\Debug\net6.0\ref\Controlnaya.dll
