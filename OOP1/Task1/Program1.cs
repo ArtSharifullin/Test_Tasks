@@ -14,18 +14,16 @@ Console.WriteLine($"imaginaryPart(a) = {a.ImaginaryPart}");
 Console.WriteLine($"imaginaryPart(b) = {b.ImaginaryPart}");
 Console.WriteLine("------------------------------------------------");
 
-Console.WriteLine($"module(a) = {a.Module()}");
-Console.WriteLine($"module(b) = {b.Module()}");
+Console.WriteLine($"module(a) = {a.Module}");
+Console.WriteLine($"module(b) = {b.Module}");
 Console.WriteLine("------------------------------------------------");
 
-Console.WriteLine($"arg(a) = {a.Argument()}");
-Console.WriteLine($"arg(b) = {b.Argument()}");
+Console.WriteLine($"arg(a) = {a.Argument}");
+Console.WriteLine($"arg(b) = {b.Argument}");
 Console.WriteLine("------------------------------------------------");
 
-Console.Write("a + b = ");
-ComplexNum.Sum(a, b);
+Console.WriteLine($"a + b = {a + b}");
 Console.WriteLine("------------------------------------------------");
 
-Console.Write("a - b = ");
-ComplexNum.Subtraction(a, b);
+Console.WriteLine($"a - b = {a - b}");
 Console.WriteLine("------------------------------------------------");

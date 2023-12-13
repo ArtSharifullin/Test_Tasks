@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Text;
 // 2
 
 namespace ComplexNumClass
@@ -33,14 +34,14 @@ namespace ComplexNumClass
             return new ComplexNum(mod, arg);
         }
 
-        public double RealPart()
+        public double RealPart
         {
-            return Math.Round(module * Math.Cos(argument),3);
+            get { return Math.Round(module * Math.Cos(argument), 3); }
         }
 
-        public double ImaginaryPart()
+        public double ImaginaryPart
         {
-            return Math.Round(module * Math.Sin(argument),3);
+            get { return Math.Round(module * Math.Sin(argument), 3); }
         }
 
         public double Module
@@ -53,31 +54,33 @@ namespace ComplexNumClass
             get { return argument; }
         }
 
-        public static void Multiplication(ComplexNum a, ComplexNum b)
+        public static ComplexNum operator *(ComplexNum a, ComplexNum b)
         {
-            var r = (a.RealPart() * b.RealPart()) - (a.ImaginaryPart() * b.ImaginaryPart());
-            var i = (a.RealPart() * b.ImaginaryPart()) + (a.ImaginaryPart() * b.RealPart());
-            if (i > 0) { Console.WriteLine($"{Math.Round(r)} + {Math.Round(i)}i"); }
-            else if (i < 0) { Console.WriteLine($"{Math.Round(r)} - {Math.Abs(Math.Round(i))}i"); }
-            else Console.WriteLine(r);
+            var r = (a.RealPart * b.RealPart) - (a.ImaginaryPart * b.ImaginaryPart);
+            var i = (a.RealPart * b.ImaginaryPart) + (a.ImaginaryPart * b.RealPart);
+            return ComplexNum.Alg(r, i);
         }
 
-        public static void Division(ComplexNum a, ComplexNum b)
+        public static ComplexNum operator /(ComplexNum a, ComplexNum b)
         {
-            var denom = (b.RealPart() * b.RealPart()) + (b.ImaginaryPart() * b.ImaginaryPart());
+            var denom = (b.RealPart * b.RealPart) + (b.ImaginaryPart * b.ImaginaryPart);
 
             if (denom != 0)
             {
-                var r = ((a.RealPart() * b.RealPart()) + (a.ImaginaryPart() * b.ImaginaryPart()))/denom;
-                var i = ((b.RealPart() * a.ImaginaryPart()) - (a.RealPart() * b.ImaginaryPart()))/denom;
+                var r = ((a.RealPart * b.RealPart) + (a.ImaginaryPart * b.ImaginaryPart))/denom;
+                var i = ((b.RealPart * a.ImaginaryPart) - (a.RealPart * b.ImaginaryPart))/denom;
 
-                if (i > 0) { Console.WriteLine($"{Math.Round(r,5)} + {Math.Round(i,5)}i"); }
-                else if (i < 0) { Console.WriteLine($"{Math.Round(r, 5)} - {Math.Abs(Math.Round(i, 5))}i"); }
-                else Console.WriteLine(r);
+                return ComplexNum.Alg(r, i);
             }
-            else { Console.WriteLine("Знаменатель равен нулю, деление невозможно !"); }
-   
-        }  
+            else { return ComplexNum.Alg(0, 0);}
+        }
+
+        public override string ToString()
+        {
+            if (RealPart != 0 && ImaginaryPart > 0) { return $"{RealPart} + {ImaginaryPart}i"; }
+            if (RealPart != 0 && ImaginaryPart < 0) { return $"{RealPart} - {Math.Abs(ImaginaryPart)}i"; }
+            return $"{ImaginaryPart}i";
+        }
     }
 }
 

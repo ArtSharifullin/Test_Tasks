@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Text;
 // 1
 
 namespace ComplexNumClass
@@ -32,47 +33,55 @@ namespace ComplexNumClass
             get { return imaginaryPart; }
         }
 
-        public double Module()
+        public double Module
         {
-            double r = realPart;
-            double i = imaginaryPart;
-            var z = Math.Sqrt(r * r + i * i);
+            get
+            {
+                double r = realPart;
+                double i = imaginaryPart;
+                var z = Math.Sqrt(r * r + i * i);
 
-            return z;
+                return z;
+            }
         }
 
-        public double Argument()
+        public double Argument
         {
-            double r = realPart;
-            double i = imaginaryPart;
-            double arg = 0;
+            get
+            {
+                double r = realPart;
+                double i = imaginaryPart;
+                double arg = 0;
 
-            if (r > 0) { arg = Math.Atan(i / r); }
-            if (r < 0 &&  i >= 0) { arg = Math.PI + Math.Atan(i / r); }
-            if (r < 0 && i < 0) { arg = Math.Atan(i / r) - Math.PI; }
-            if (r == 0 && i > 0) { arg = Math.PI/2; }
-            if (r == 0 && i < 0) { arg = -(Math.PI / 2); }
+                if (r > 0) { arg = Math.Atan(i / r); }
+                if (r < 0 && i >= 0) { arg = Math.PI + Math.Atan(i / r); }
+                if (r < 0 && i < 0) { arg = Math.Atan(i / r) - Math.PI; }
+                if (r == 0 && i > 0) { arg = Math.PI / 2; }
+                if (r == 0 && i < 0) { arg = -(Math.PI / 2); }
 
-            return arg;
+                return arg;
+            }
         }
 
-        public static void Sum(ComplexNum a, ComplexNum b)
+        public static ComplexNum operator +(ComplexNum a, ComplexNum b)
         {
-
             var r = a.realPart + b.realPart;
             var i = a.imaginaryPart + b.imaginaryPart;
-            if (i > 0) { Console.WriteLine($"{r} + {i}i"); }
-            else if (i < 0) { Console.WriteLine($"{r} - {Math.Abs(i)}i"); }
-            else Console.WriteLine(r);
+            return new ComplexNum(r, i);
         }
 
-        public static void Subtraction(ComplexNum a, ComplexNum b)
+        public static ComplexNum operator -(ComplexNum a, ComplexNum b)
         {
             var r = a.realPart - b.realPart;
             var i = a.imaginaryPart - b.imaginaryPart;
-            if (i > 0) { Console.WriteLine($"{r} + {i}i"); }
-            else if (i < 0) { Console.WriteLine($"{r} - {Math.Abs(i)}i"); }
-            else Console.WriteLine(r);
+            return new ComplexNum(r, i);
+        }
+
+        public override string ToString()
+        {
+            if (realPart != 0 && imaginaryPart > 0) { return $"{realPart} + {imaginaryPart}i"; } 
+            if (realPart != 0 && imaginaryPart < 0) { return $"{realPart} - {Math.Abs(imaginaryPart)}i"; }
+            return $"{imaginaryPart}i";
         }
     }
 }
