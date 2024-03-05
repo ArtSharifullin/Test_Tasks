@@ -1,0 +1,14 @@
+C:\Users\Moibaty\source\repos\Test_Tasks\ps3_15\bin\Debug\net7.0\ps3_15.exe
+C:\Users\Moibaty\source\repos\Test_Tasks\ps3_15\bin\Debug\net7.0\ps3_15.deps.json
+C:\Users\Moibaty\source\repos\Test_Tasks\ps3_15\bin\Debug\net7.0\ps3_15.runtimeconfig.json
+C:\Users\Moibaty\source\repos\Test_Tasks\ps3_15\bin\Debug\net7.0\ps3_15.dll
+C:\Users\Moibaty\source\repos\Test_Tasks\ps3_15\bin\Debug\net7.0\ps3_15.pdb
+C:\Users\Moibaty\source\repos\Test_Tasks\ps3_15\obj\Debug\net7.0\ps3_15.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Moibaty\source\repos\Test_Tasks\ps3_15\obj\Debug\net7.0\ps3_15.AssemblyInfoInputs.cache
+C:\Users\Moibaty\source\repos\Test_Tasks\ps3_15\obj\Debug\net7.0\ps3_15.AssemblyInfo.cs
+C:\Users\Moibaty\source\repos\Test_Tasks\ps3_15\obj\Debug\net7.0\ps3_15.csproj.CoreCompileInputs.cache
+C:\Users\Moibaty\source\repos\Test_Tasks\ps3_15\obj\Debug\net7.0\ps3_15.dll
+C:\Users\Moibaty\source\repos\Test_Tasks\ps3_15\obj\Debug\net7.0\refint\ps3_15.dll
+C:\Users\Moibaty\source\repos\Test_Tasks\ps3_15\obj\Debug\net7.0\ps3_15.pdb
+C:\Users\Moibaty\source\repos\Test_Tasks\ps3_15\obj\Debug\net7.0\ps3_15.genruntimeconfig.cache
+C:\Users\Moibaty\source\repos\Test_Tasks\ps3_15\obj\Debug\net7.0\ref\ps3_15.dll
