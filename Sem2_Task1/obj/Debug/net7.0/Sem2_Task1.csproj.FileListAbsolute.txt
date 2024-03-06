@@ -1,0 +1,14 @@
+C:\Users\Moibaty\source\repos\Test_Tasks\Sem2_Task1\bin\Debug\net7.0\Sem2_Task1.exe
+C:\Users\Moibaty\source\repos\Test_Tasks\Sem2_Task1\bin\Debug\net7.0\Sem2_Task1.deps.json
+C:\Users\Moibaty\source\repos\Test_Tasks\Sem2_Task1\bin\Debug\net7.0\Sem2_Task1.runtimeconfig.json
+C:\Users\Moibaty\source\repos\Test_Tasks\Sem2_Task1\bin\Debug\net7.0\Sem2_Task1.dll
+C:\Users\Moibaty\source\repos\Test_Tasks\Sem2_Task1\bin\Debug\net7.0\Sem2_Task1.pdb
+C:\Users\Moibaty\source\repos\Test_Tasks\Sem2_Task1\obj\Debug\net7.0\Sem2_Task1.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Moibaty\source\repos\Test_Tasks\Sem2_Task1\obj\Debug\net7.0\Sem2_Task1.AssemblyInfoInputs.cache
+C:\Users\Moibaty\source\repos\Test_Tasks\Sem2_Task1\obj\Debug\net7.0\Sem2_Task1.AssemblyInfo.cs
+C:\Users\Moibaty\source\repos\Test_Tasks\Sem2_Task1\obj\Debug\net7.0\Sem2_Task1.csproj.CoreCompileInputs.cache
+C:\Users\Moibaty\source\repos\Test_Tasks\Sem2_Task1\obj\Debug\net7.0\Sem2_Task1.dll
+C:\Users\Moibaty\source\repos\Test_Tasks\Sem2_Task1\obj\Debug\net7.0\refint\Sem2_Task1.dll
+C:\Users\Moibaty\source\repos\Test_Tasks\Sem2_Task1\obj\Debug\net7.0\Sem2_Task1.pdb
+C:\Users\Moibaty\source\repos\Test_Tasks\Sem2_Task1\obj\Debug\net7.0\Sem2_Task1.genruntimeconfig.cache
+C:\Users\Moibaty\source\repos\Test_Tasks\Sem2_Task1\obj\Debug\net7.0\ref\Sem2_Task1.dll
