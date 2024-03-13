@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿
 
 namespace Sem2_Task1
 {
@@ -25,10 +21,23 @@ namespace Sem2_Task1
                 
                 var s = new Segment(int.Parse(seg[0]), int.Parse(seg[1]), 
                     int.Parse(seg[2]), int.Parse(seg[3]));
-                result.Add(s);
+
+                var f = true;
+                if (result.Count > 0)
+                {
+                    foreach (var o in result)
+                    {
+                        if (o.X1 == s.X1 && o.Y1 == s.Y1 && o.X2 == s.X2 && o.Y2 == s.Y2)
+                        {
+                            f = false;
+                            break;
+                        }
+                    }
+                }
+                if (f) { result.Add(s); }
             }
             segments = result;
-            
+
         }
 
         public GraphicPic(List<Segment> s) 
@@ -56,7 +65,6 @@ namespace Sem2_Task1
                 if (seg.X1 == s.X1 && seg.Y1 == s.Y1 && seg.X2 == s.X2 && seg.Y2 == s.Y2)
                 {
                     f = false;
-                    Console.WriteLine("Данный сегмент уже существует в списке\n");
                     break;
                 }
             }
