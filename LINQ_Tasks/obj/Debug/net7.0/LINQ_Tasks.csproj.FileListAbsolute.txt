@@ -1,0 +1,14 @@
+C:\Users\Moibaty\source\repos\Test_Tasks\LINQ_Tasks\bin\Debug\net7.0\LINQ_Tasks.exe
+C:\Users\Moibaty\source\repos\Test_Tasks\LINQ_Tasks\bin\Debug\net7.0\LINQ_Tasks.deps.json
+C:\Users\Moibaty\source\repos\Test_Tasks\LINQ_Tasks\bin\Debug\net7.0\LINQ_Tasks.runtimeconfig.json
+C:\Users\Moibaty\source\repos\Test_Tasks\LINQ_Tasks\bin\Debug\net7.0\LINQ_Tasks.dll
+C:\Users\Moibaty\source\repos\Test_Tasks\LINQ_Tasks\bin\Debug\net7.0\LINQ_Tasks.pdb
+C:\Users\Moibaty\source\repos\Test_Tasks\LINQ_Tasks\obj\Debug\net7.0\LINQ_Tasks.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Moibaty\source\repos\Test_Tasks\LINQ_Tasks\obj\Debug\net7.0\LINQ_Tasks.AssemblyInfoInputs.cache
+C:\Users\Moibaty\source\repos\Test_Tasks\LINQ_Tasks\obj\Debug\net7.0\LINQ_Tasks.AssemblyInfo.cs
+C:\Users\Moibaty\source\repos\Test_Tasks\LINQ_Tasks\obj\Debug\net7.0\LINQ_Tasks.csproj.CoreCompileInputs.cache
+C:\Users\Moibaty\source\repos\Test_Tasks\LINQ_Tasks\obj\Debug\net7.0\LINQ_Tasks.dll
+C:\Users\Moibaty\source\repos\Test_Tasks\LINQ_Tasks\obj\Debug\net7.0\refint\LINQ_Tasks.dll
+C:\Users\Moibaty\source\repos\Test_Tasks\LINQ_Tasks\obj\Debug\net7.0\LINQ_Tasks.pdb
+C:\Users\Moibaty\source\repos\Test_Tasks\LINQ_Tasks\obj\Debug\net7.0\LINQ_Tasks.genruntimeconfig.cache
+C:\Users\Moibaty\source\repos\Test_Tasks\LINQ_Tasks\obj\Debug\net7.0\ref\LINQ_Tasks.dll
